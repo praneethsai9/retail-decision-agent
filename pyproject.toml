@@ -1,0 +1,27 @@
+[project]
+name = "retail_decision_agent"
+version = "0.1.0"
+description = "Multi-agent Executive Decision Workflow using ADK, Gemini, and BigQuery"
+requires-python = ">=3.10"
+
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "python-dotenv",
+    "google-cloud-aiplatform",
+    "google-cloud-bigquery",
+    "google-auth",
+    "google-auth-oauthlib",
+    "google-cloud-core",
+    "google-cloud-logging",
+    "google-cloud-secret-manager",
+    "google-adk",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# Tell Hatch exactly which package directory to include
+[tool.hatch.build.targets.wheel]
+packages = ["agent"]
